@@ -25,7 +25,8 @@ export const Header = () => {
       <div className='header_nav'>
         <Link to={!state.user && '/login'}>
           <div onClick={handleAuthentication} className='header_option option1'>
-            <span className='header_optionLineOne'>Hello {state.user ? state.user : 'Guest'}</span>
+            <span className='header_optionLineOne'>Hello {state.user ?
+               state.user.email : 'Guest'}</span>
             <span className='header_optionLineTwo'>{state.user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>

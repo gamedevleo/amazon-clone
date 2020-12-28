@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+  width:80%;
 }
 
 .checkoutProduct_info >button{
@@ -19,6 +20,8 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color:#111;
+  width:20%;
+  margin-top: 30px;
 }
 
 .checkoutProduct_image{
@@ -31,6 +34,8 @@
   display: flex;
 }
 .checkoutProduct_title{
+  overflow:visible;
   font-size: 1em;
   font-weight: 800;
+  width:50%;
 }

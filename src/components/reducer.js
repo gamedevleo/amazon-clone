@@ -7,8 +7,6 @@ export const getBasketTotal = (basket)=>{
   return basket?.reduce((amount,item)=>item.price+amount,0);
 }   //use reduce function to get the total of price, the second parameter is the inital value of amount
 
-  //?. is an optional chaining operator.  it can prevent the error if the property is null or underfined
-
 
 export const reducer = (state,action)=>{
   switch(action.type){
@@ -31,6 +29,12 @@ export const reducer = (state,action)=>{
       return {
         ...state,
         basket:newBasket
+      }
+
+    case 'EMPTY_BASKET':
+      return {
+        ...state,
+        basket:[]
       }
     case 'SET_USER':
       return {

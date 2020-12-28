@@ -13,7 +13,7 @@ export const Checkout = () => {
           alt=''></img>
 
         <div className='checkout_cart'>
-          <h3>Hello,{user ? user:'Guest'}</h3>
+          <h3>Hello,{user ? user.email:'Guest'}</h3>
           <h2 className="checkout_title">
              Your shopping Basket
           </h2>
