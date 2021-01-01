@@ -30,12 +30,13 @@ export const Payment = () => {
       });
       setClientSecret(response.data.clientSecret);
     }
+    console.log(basket);
     getClientSecret();
   },[basket]);
 
   console.log('The clientSecret>>>',clientSecret);
-  const handleSubmit = async (e,clientSecret)=>{
-    if(clientSecret !== true && clientSecret){
+  const handleSubmit = async (e)=>{
+    if(clientSecret !== true){
       e.preventDefault();
       setProcessing(true);
 
@@ -68,15 +69,15 @@ export const Payment = () => {
         }
         else{
           alert('Please login your account first!');
-          history.go(0);
+          history.push('/login');
         }
-      }).catch(error=>{
+      }).catch(({error})=>{
         setError(error);
       });
     }
     else{
       alert('Sorry,something wrong. Please check your account and shopping cart. The Order Total must more than $0. Thanks.');
-      history.go(0);
+      history.push('/');
     }
   }
   const handleChange = e=>{

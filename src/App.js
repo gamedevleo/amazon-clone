@@ -49,7 +49,6 @@ function App() {
               <Payment />
             </Elements>
           </Route>
-
           <Route path='/404'>
             <h1>This is 404</h1>
           </Route>
